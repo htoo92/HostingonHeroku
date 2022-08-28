@@ -23,7 +23,7 @@ class MySessionMiddleware
        
         if($user && $user->isLogin){
             // redirect login with message
-            return redirect('/errors');
+            return redirect('/users');
         }
         return $next($request);
     }
