@@ -35,14 +35,14 @@ class CreateAdminUserSeeder extends Seeder
             'ownerdetails_overrate' => '2',
         ]);
 
-        // $user1 = User::create([
-        //     'name' => 'supervisor', 
-        //     'email' => '091234',
-        //     'password' => Hash::make('123456'),
-        //     'group_id' => '1',
-        //     'report_to' => '1',
-        //     'ownerdetails_overrate' => '2',
-        // ]);
+        $user1 = User::create([
+            'name' => 'supervisor', 
+            'email' => 'aungthu@gmail.com',
+            'password' => Hash::make('123456789'),
+            'group_id' => '1',
+            'report_to' => '1',
+            'ownerdetails_overrate' => '2',
+        ]);
 
         // $user2 = User::create([
         //     'name' => 'member1', 
