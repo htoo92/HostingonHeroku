@@ -35,23 +35,23 @@ class CreateAdminUserSeeder extends Seeder
             'ownerdetails_overrate' => '2',
         ]);
 
-//         $user1 = User::create([
-//             'name' => 'supervisor', 
-//             'email' => 'aungthu@gmail.com',
-//             'password' => Hash::make('123456789'),
-//             'group_id' => '1',
-//             'report_to' => '1',
-//             'ownerdetails_overrate' => '2',
-//         ]);
+        $user1 = User::create([
+            'name' => 'supervisor', 
+            'email' => 'aungthu@gmail.com',
+            'password' => Hash::make('123456789'),
+            'group_id' => '1',
+            'report_to' => '1',
+            'ownerdetails_overrate' => '2',
+        ]);
 
-        // $user2 = User::create([
-        //     'name' => 'member1', 
-        //     'email' => '09',
-        //     'password' => Hash::make('123456'),
-        //     'group_id' => '1',
-        //     'report_to' => '2',
-        //     'ownerdetails_overrate' => '2',
-        // ]);
+        $user2 = User::create([
+            'name' => 'member1', 
+            'email' => 'member@gmail.com',
+            'password' => Hash::make('12345600'),
+            'group_id' => '1',
+            'report_to' => '2',
+            'ownerdetails_overrate' => '2',
+        ]);
 
         // $user3 = User::create([
         //     'name' => 'member2', 
@@ -109,8 +109,8 @@ class CreateAdminUserSeeder extends Seeder
         $supervisor->syncPermissions($permissions);
      
         $user->assignRole([$role->id]);
-        // $user1->assignRole([$supervisor->id]);
-        // $user2->assignRole([$member->id]);
+        $user1->assignRole([$supervisor->id]);
+        $user2->assignRole([$member->id]);
         // $user3->assignRole([$member->id]);
     }
 }
